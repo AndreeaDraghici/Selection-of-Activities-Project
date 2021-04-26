@@ -1,0 +1,248 @@
+\documentclass[12pt, a4paper,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage{comment}
+\usepackage{ graphicx } 
+\graphicspath{ {./images/} }
+\usepackage{biblatex}
+
+\begin{document}
+
+\begin{center}
+\Huge
+{RAPORT TEHNIC}
+\end{center}
+\vspace{3em}
+\begin{center}
+\huge
+{COPERTA}
+\end{center}
+\Large
+\vspace{5em}
+
+Titlul temei: Selectarea activităților
+
+\Large
+\vspace{2em} 
+
+Numele: \ Drăghici Andreea-Maria
+
+\Large
+\vspace{2em} 
+Grupa:\ CR1.1B
+\large
+\vspace{2em} 
+
+Anul de studiu: Anul I
+
+\Large
+\vspace{2em} 
+
+Specializarea:\ Calculatoare Romana
+
+\begin{center}
+\huge
+
+\newpage{Enuntul problemei}
+\end{center}
+\vspace{10em} 
+\Large
+\paragraph{Se considera o multime de activitati astfel incat fiecare dintre ele necesita acces exclusiv la o resursa comuna. Pentru fiecare activitate se cunoaste timpul de start si durata. Se cere determinarea unei submultimi de cardinalitate maxima a acestor activitati de astfel incat oricare doua activitati selectate sunt mutual compatibile( nu se suprapun in timp). }
+\Large
+\begin{center}
+
+\newpage{Algoritmii propuși}
+\vspace{3em}
+\end{center}
+\begin{figure}
+\includegraphics[width=15cm, height=15cm]{Metoda1.png}
+\caption{Metoda Greedy}
+\end{figure}
+\paragraph{Metoda 1\\}
+\paragraph{Presupunem ca detinem o multime A=1,2,...,n unde n = numarul de activitati care folosesc aceeasi resursa comuna. Aceasta resursa poate fi folosita de o singura activitate la un moment dat, deoarece acestea nu trebuie sa se suprapuna in acelasi timp. 
+Fiecare activitate are un timp de start si un timp de terminare 
+(start[iterator] $>$ = finish[constant]). \\
+Presupunem ca activitatile sunt ordonate crescator dupa timpul de terminare:\ t1 \textless= t2 \textless= ..... \textless= tn \\
+Complexitatea \ timpului\ acestui \ algoritm\ este \ $ \theta (n) $, \ unde \ n\ este \ numarul \ total \ de \ activitati.\ Metoda Greedy determina cea mai optima solutie posibila.\\
+Denumirile variabilelor in limbajul C, respctiv Python difera fata de algoritmul in pseudocod, am incercat sa scriu algoritmul in pseudocod cat mai simplu si concis, iar implementarile pentru cod sunt adaptate in functie de fiecare algoritm in parte.
+}
+\vspace{2em}
+\large
+\vspace{2em}
+\newpage{}
+\begin{figure}
+\includegraphics[width=15cm, height=15cm]{Metoda2.png}
+\caption{Metoda Bubble Sort}
+\end{figure}
+\Large
+\vspace{2em}
+\paragraph{Metoda 2\\\\}
+\paragraph{Implementam metoda Bubble pentru a sorta crescator activitatile dupa ora de final.\
+Selectam prima activitate ,cea care se termina cel mai devreme, dupa aceea vom selecta, la fiecare pas, prima activitate neselctata,care nu se suprapune peste cele deja selectate. \\
+Afisam activitatile in functie de ora de inceput si final, selectand durata acestora\\
+Complexitatea timpului acestui algoritm este O (n) , unde \ n\ este \ numarul \ total \ de \ activitati. }
+\begin{center}
+\huge
+\newpage{Date experimentale}
+\vspace{1em}
+\end{center}
+\section{Random Generators}
+\vspace{1em}
+ \paragraph{Am folosit o metod\u a pentru generarea automat\u a de date de intrare, astfel \^ inc\^at determinarea unei submult\c imi de cardinalitate maxim\u a a activit\u at\c ilor trebuie s\u a aib\u a oricare dou\u a activit\u at\c i mutual compatibile \^in funct\c ie de \^inceputul s\c i  durata fiec\u arei activit\u at\c i.\\\ }
+\textbf{ Random Generator Algorithm}
+\begin{enumerate}
+\item  limit=RAND\_ MAX-(RAND\_MAX \% \ n)\
+\item   \ \textbf{while} r=rand() $>$= limit \
+\item    \ return r \% \ n
+\item   srand time(0) 
+\item   \   \ \textbf{for } \ i=1 \ to \ 40
+\item   \    \ return randRange 
+\end{enumerate}
+\large
+\paragraph{Am folosit functia \textit{rand} pentru  a returna un numar intreg aleator situat in intervalul [ 0 ,  RAND\_MAX ]  , unde RAND\_MAX este egal cu 2$^ {31} $-1 .\  Cu ajutorul buclei for putem specifica limita unei secvente de valori, astfel functia va returna un numar aletor selectat din intervalul nostru, dar fara sa includa limita sfarsitului,adica valoarea 40.}
+\Large
+\begin{figure}
+\begin{center}
+\huge
+{Proiectarea aplicat\c iei}
+\vspace{3em}
+\end{center}
+\section{Structura de nivel \^inalt a aplicat\c iei}
+\includegraphics[width=15cm, height=15cm]{proiectarea_aplicatiei.png.jpg}
+\end{figure}
+\Large 
+\paragraph{Apelul functiei principale : \\ } \
+
+
+ \#include \textless stdlib.h \textgreater \
+
+  \#include \textless stdio.h \textgreater \
+ 
+    \#include \textless time.h \textgreater \
+  
+     \#include \textless selectare.h \textgreater \
+     
+     \#include \textless selectare.c \textgreater \\\\
+{selectarea\_ activitatilor \ $:$ \ main.o \ selection.o \\
+
+ $<$ T $>$  gcc $-$ o \ selectarea\_activitatilor \ main.o \  selectare.o
+ main.o\ $:$ main.c \ selectare.c \ selectare.h \\
+ 
+ $<$ T $>$ gcc  $-$ c \ main.c \\
+ 
+ objects $=$ main.o \ selection.o \\
+ 
+ selectarea\_activitatilor $:$ \$(objects) \\
+ 
+ $<$ T  $>$ gcc $-$ o selectarea\_activitatilor \$(objects)\\
+ 
+ \$(objects):selectare.h \\
+ 
+ selectare.c $:$ selectare.h}
+ 
+\newpage
+\large
+\section{Specificarea datelor de intrare }
+\paragraph{
+Sortam crescator activitatile dupa ora de final.\\
+Datele de intrare sunt reprezentate de numarul de activitati pe care le avem, se cunoaste timpul de inceput, durata si timpul de sfarsit.\\
+Fiecare din aceste activitati necesita acces exclusiv la o resursa comuna. \\
+}
+\section{Specificarea datelor de iesire}
+\large{} 
+\paragraph{
+Determinam submultimea de cardinalitate maxima a acestor activitati, astfel incat oricare doua activitati selectate sunt mutual compatibile, adica exploram toate submultimile de activitati astfel incat oricare doua activitati din aceeasi submultime sa nu se suprapuna in acelasi timp.Selectam prima activitate, cea care se termina cel mai devreme,  dupa aceea vom selecta, la fiecare pas, prima activitate neselectata,care nu se suprapune peste cele deja selectate. \\
+}
+
+ \begin{figure}
+ \includegraphics[width=15cm, height=17cm]{date_de_iesire.png}
+ \caption{Rezultate Metoda 2\_C}
+ \end{figure}
+ 
+ \begin{figure}
+ \includegraphics[width=15cm, height=17cm]   {date_de_iesire_alg2.png}
+ \caption{Rezultate Metoda 1\_C}
+ \end{figure}
+ 
+ \begin{figure}
+ \includegraphics[width=15cm,height=15cm]{date.png}
+ \caption{Rezultate Metoda 1\_Python}
+ \end{figure}
+ 
+ \begin{figure}
+ \includegraphics[width=15cm,height=15cm]{date2.png}
+ \caption{Rezultate Metoda 2\_Python}
+ \end{figure}
+ 
+\newpage
+\large
+\section{Lista tuturor modulelor aplicatiei si descrierea lor \\}
+\large
+\paragraph{
+void read() ; //functia pentru citit \\\\
+void sort(); //functia pentru sortarea activitatilor\\\\
+void write(); //functia pentru afisare\\\\
+int randRange(int value); //functia pentru care cardinalitatea maxima este stocata\\\\
+int main(int argc, char **argv); //functia care genereaza random numerele\\\\
+}
+\section{Descriererea scopului pentru fiecare functie \\}
+\paragraph{
+ Fiecare implementare contine anumite functii care "impart" programul principal in anumite subprograme separate. \ Aceste functii sunt grupate in acelasi cod, cod care corespunde elementelor(parametrilor) declarate in interiorul acestor functii.\ (de ex: "int value","int argc, char **argv"...restul parametrilor care corespund fiecarei functii din cod) .\\\\
+ Fiecare functiei este folosita cu un anumit scop in programul principal : \\\\\\}
+ \paragraph{
+ void read() ;  //afișăm activitățile în funcție de ora de început și de sfârșit, selectând durata lor\\\\
+ void sort();   //sortam activitățile în ordine crescătoare după ora de sfârșit, selectând activitatea care se termina cel mai devreme\\\\
+ void write(); //afișează activități care nu se suprapun în același timp\\\\
+ int randRange(int value); // returneaza o valoare uniformă în intervalul (0, n-1) pentru orice n pozitiv \\
+ }
+ \section{Descrierea parametrilor \\}
+\paragraph{ 
+int value // stocheaza cardinalitatea maxima a activitatilor\\\\
+int no\_of\_activity // reprezinta numarul total de activitati intr-un anumit timp
+}
+\section{Semnificatia valorilor de return\\}
+\paragraph{
+return random \% value; //returneaza o solutie random\\
+ return arr;    //returneaza multimea de activitati 
+}
+\begin{center}
+\Huge
+\newpage{Concluzii}
+\vspace{2em}
+\end{center}
+\paragraph{
+- Am incercat sa fac ambele implementari ale algoritmilor, atat in limbajul C, cat si in limbajul Python.\\\\
+- Am incercat sa respect fiecare cerinta din metodologie, astfel incat sa pot descrie fiecare parametru in functie de implementarile pe care le am.\\\\
+- Am folosit Metoda Greedy, deoarece aceasta determina cea mai optima solutie.\\\\
+- Am folosit Metoda Bubble Sort pentru a sorta crescator activitatile.\\\\
+- Consider ca a fost o provocare(din care am incercat sa invat cat mai multe), atat gandirea celor doua metode, cat si implementarea acestora in cele doua limbaje de programare.\\\\
+-Am incercat sa folosesc si un algoritm pentru generarea aleatoare a numerelor, dar consider ca nu este cea mai buna metoda pe care am incercat sa o folosesc.\\
+-Ca o extindere a studiului pe termen mai lung, consider ca referinta ajutatoare in intelegerea si parcurgerea temelor de casa, cartea Introduction to Algorithms(3rd edition)-Thomas H. Cormen\\\\}
+\newpage
+\begin{center}
+\Huge
+{Rezumatul rezultatelor}
+\vspace{2em}
+\end{center}
+\large
+\paragraph{
+-Rezultatele care trebuiau obtinute in cazul de fata erau reprezentate de cardinalitatea maxima a activitatilor astfel incat oricare doua activitati sa nu se suprapuna in acelasi timp.\\\\
+-Rezultatele obtinute pentru cele doua implementari se pot observa in Figurile 3,\ 4,\ 5 si 6. In figura 3  rezultatele obtinute sunt ordonate crescator in functie de timul de sfarsit, pe cand in figura 4, rezultatele obtinute reprezinta cardinalitatea maxima a activitatilor,adica am explorat toate submultimile de activitati care nu se suprapun in acelasi timp.\\\\
+}
+\begin{center}
+\Huge
+{Bibliografie}
+\vspace{1em}
+\end{center}
+\paragraph{Mai jos se pot observa cateva referinte bibliografice, capitole din cursuri, carti, site-uri web,referinte ce au ajutat in parcurgerea si intelegerea mai ampla a temei de casa: \\}
+\begin{thebibliography}
+  \paragraph{Thomas H. Cormen, Charles E. Leiserson, Ronald L.
+Rivest, and Cliff Stein, Introduction to Algorithms (3rd
+edition), MIT Press and McGraw-Hill, 2009\\\\}
+{Chapter12/Capitolul12\\\\} 
+{Chapter6/Capitolul6\\\\}
+{Infoarena $ - $  www.infoarena.ro \\\\}
+{Limbajul LaTex:lista principalelor comenzi\\\\} {http://andrei.clubcisco.ro/cursuri/\\\\}
+{https://en.wikipedia.org/wiki/Python\_(programming\_language)}
+\end{thebibliography}
+\end{document}
