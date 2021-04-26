@@ -27,3 +27,17 @@
 	<time.h>
 	"selectare.h"
 
+1619425017 source:c:\users\user\documents\github\proiect-proiectarea-algoritmilor\alg1_c\selectarea_activitatilor\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"selectare.h"
+	"selectare.c"
+
+1619425021 c:\users\user\documents\github\proiect-proiectarea-algoritmilor\alg1_c\selectarea_activitatilor\selectare.h
+
+1619425017 c:\users\user\documents\github\proiect-proiectarea-algoritmilor\alg1_c\selectarea_activitatilor\selectare.c
+	<stdio.h>
+	<time.h>
+	"selectare.h"
+
