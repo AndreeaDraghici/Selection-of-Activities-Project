@@ -1,13 +1,9 @@
 # Proiect-Proiectarea-Algoritmilor
 
-Cerinnta:
+TASK:
 
 
-Selectarea activitatilor. Se considera o multime de activitati astfel incat
-fiecare dintre ele necesita acces exclusiv la o resursa comuna. Pentru
-
-fiecare activitate se cunoaste timpul de start  ̧si durata. Se cere deter-
-minarea unei submultimi de cardinalitate maxima a acestor acivitati de
-
-astfel incat oricare doua activitati selectate sunt mutual compatibile (nu
-se suprapun in timp). Implementati doi algoritmi diferiti. ( Python & C ).
+Selection of activities. It is considered a lot of activities so
+each of them requires exclusive access to a common resource. For each activity knows the start time and duration. 
+It is required to mining a subset of maximum cardinality of these activities so that any two selected activities are mutually compatible (no
+overlap in time). Implement two different algorithms. ( in Python & C).
