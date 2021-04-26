@@ -1,0 +1,1 @@
+Am folosit in codul sursa din Python o functie care genereaza aleator orele si minutele pentru inceputul activitatilor, cat si pentru sfarsitul acestora, deoarece nu am reusit sa generez direct din fisiere.
