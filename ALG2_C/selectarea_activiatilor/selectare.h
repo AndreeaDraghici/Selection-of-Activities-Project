@@ -10,6 +10,6 @@ void read() ;
 void sort() ;
 void write() ;
 int randRange(int value) ;
-
+int n,start[100],finish[100],iterator[100];
 
 #endif // SELECTARE_H_INCLUDED
