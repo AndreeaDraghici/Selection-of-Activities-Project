@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1589848124 source:c:\users\andreea\desktop\p1\random_alg\random_numbers_generator\main.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-
