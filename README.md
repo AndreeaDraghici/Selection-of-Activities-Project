@@ -12,5 +12,8 @@ overlap in time). Implement two different algorithms. ( in Python & C ).
 
 ------------------------------------------------------------------------------------------
 
+!!! NOTE !!!
+
 In this repository there are implemented 2 algorithms, both in C language and in Python, also this project also has an editable technical report in LaTex as well as a pdf generated automatically from LaTex. 
+
 The requirement of the task is above, see also the technical report in LaTex or directly the pdf related to it.
